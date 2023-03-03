@@ -15,6 +15,8 @@
                             <th scope="col">Surprise?</th>
                             <th scope="col">Chocolate</th>
                             <th scope="col">Size</th>
+                            <th scope="col">Info</th>
+
                         </tr>
                     </thead>
                     <tbody>
@@ -26,7 +28,11 @@
                                 <td>{{ $egg->contains }}</td>
                                 <td>{{ $egg->chocolate }}</td>
                                 <td>{{ $egg->size }}</td>
+                                <td><a href="{{ route('eggs.show', $egg->id) }}">
+                                        MOSTRA
+                                    </a></td>
                             </tr>
+
                         @empty
                             <h1 class="text-center">Non ci sono a disposizione altre uova</h1>
                         @endforelse

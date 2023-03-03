@@ -45,23 +45,32 @@ class EggController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $egg = Egg::findOrFail($id);
+        return view('eggs.show', compact('egg'));
     }
+
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Egg $egg)
     {
-        //
+        return view('eggs.edit', compact('egg'));
     }
+
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Egg $egg)
     {
-        //
+        $data = $request->all();
+
+        $egg->fill($data);
+
+        $egg->save();
+
+        return to_route('eggs.show', $egg->id);
     }
 
     /**
