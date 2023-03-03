@@ -21,7 +21,7 @@ class EggController extends Controller
      */
     public function create()
     {
-        //
+        return view('eggs.create');
     }
 
     /**
@@ -29,7 +29,15 @@ class EggController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $egg = new Egg();
+
+
+        $egg->fill($data);
+
+        $egg->save();
+        // per tornare alla route
+        return to_route('eggs.index');
     }
 
     /**
