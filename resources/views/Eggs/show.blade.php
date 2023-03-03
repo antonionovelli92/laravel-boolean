@@ -11,7 +11,15 @@
                 <p class="card-text">{{ $egg->chocolate }}</p>
                 <a href="{{ route('eggs.index') }}" class="btn btn-primary">TORNA INDIETRO</a>
                 <a href="{{ route('eggs.edit', $egg->id) }}" class="btn btn-primary">EDIT</a>
-                <a href="{{ route('eggs.index') }}" class="btn btn-primary">ELIMINA</a>
+
+                <form action="{{ route('eggs.destroy', $egg->id) }}" method="post">
+                    @method('DELETE')
+                    @csrf
+                    <button class="btn btn-primary">
+                        ELIMINA
+                    </button>
+                </form>
+
 
             </div>
         </div>

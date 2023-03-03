@@ -76,8 +76,9 @@ class EggController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Egg $egg)
     {
-        //
+        $egg->delete();
+        return to_route('eggs.index');
     }
 }
