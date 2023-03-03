@@ -1,11 +1,16 @@
-<div class="container nav">
-    <figure>
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
         <a href="{{ url('/') }}">
-            <img src="{{ asset('images/egg-logo.png') }}" alt="EGG logo ">
+            <img src="{{ asset('images/egg-logo.png') }}" alt="EGG logo " width="80" height="80"
+                class="d-inline-block align-text-top">
         </a>
-    </figure>
-    <ul>
-        <li><a href="{{ route('') }}" class="{{ request()->routeIs('') ? 'active' : '' }}">EGGS</a></li>
-        <li><a href="{{ route('') }}" class="{{ request()->routeIs('') ? 'active' : '' }}">QUALCOSA</a></li>
-    </ul>
-</div>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li>
+                    <a href="{{ route('eggs.index') }}"
+                        class="{{ request()->routeIs('eggs.index') ? 'active' : '' }}">EGGS</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
