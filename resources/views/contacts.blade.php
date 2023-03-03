@@ -3,5 +3,5 @@
 
 
 @section('content')
-    <h1 class="text-center p-5">Benvenuto nei Contacts</h1>
+    <h1 class="text-center p-5 title-text">Benvenuto nei Contacts</h1>
 @endsection

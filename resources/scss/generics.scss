@@ -1,3 +1,36 @@
 body {
     background-image: url("/images/bg-wall-1.jpg");
 }
+
+
+// effetto icona occhio/info
+.fa-eye{
+    color: lightgrey;
+    &:hover{
+        color: rgb(29, 29, 219);
+        text-shadow: 0 0 5px goldenrod;
+    }
+}
+
+a{
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+button{
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+.title-text{
+    text-shadow: 0 0 5px white;
+    &:hover{
+        
+    }
+}
+.title-content{
+    height: 100vh;
+    h1{
+        font-size: 50px;
+    }
+}

@@ -12,11 +12,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('eggs', function (Blueprint $table) {
+
             $table->id();
+            $table->string('name');
             $table->string('color');
-            $table->string('contains')->nullable();
+            $table->boolean('contains')->default(0);
             $table->string('chocolate');
-            $table->string('size');
+            $table->text('description');
+            $table->text('thumb')->nullable();
+            $table->enum('size', ['S', 'M', 'L', 'XL']);
             $table->timestamps();
         });
     }

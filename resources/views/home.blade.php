@@ -2,5 +2,8 @@
 @section('title', 'Home')
 
 @section('content')
-    <h1 class="text-center p-5">Benvenuto nella Home</h1>
+    <div class="title-content">
+        <h1 class="h-100 p-5 title-text d-flex justify-content-center align-items-center">Benvenuto nella Home</h1>
+
+    </div>
 @endsection
